@@ -1,4 +1,5 @@
 import { useLoaderData } from '@remix-run/react';
+import { json } from '@remix-run/node';
 import { getClients } from '~/api/client.server';
 import ClientPreview from '~/components/ClientPreview';
 import EmptyClients from '~/components/EmptyClients';
@@ -6,7 +7,8 @@ import EmptyClients from '~/components/EmptyClients';
 export const loader = async ({ request }) => {
     const { searchParams } = new URL(request.url);
     const query = searchParams.get('q');
-    return await getClients(query);
+    const clients = await getClients(query);
+    return json(clients);
 }
 
 export default function Index() {
