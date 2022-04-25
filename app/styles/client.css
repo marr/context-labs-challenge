@@ -18,6 +18,10 @@
     width: 128px;
 }
 
+.client-name sup {
+    font-size: small;
+}
+
 .client-quote {
     margin-bottom: 10px;
 }
