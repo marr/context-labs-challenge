@@ -11,6 +11,12 @@ export const loader = async ({ params }) => {
     return client;
 }
 
+export const meta = ({ data }) => {
+    return {
+        title: `${data.name} | Context Labs`
+    };
+}
+
 export default function ClientRoute() {
     const { avatar, name, nationality, title, quote } = useLoaderData();
     return (
