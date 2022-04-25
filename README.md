@@ -1,6 +1,14 @@
-# Welcome to Remix!
+# Context Labs
 
-- [Remix Docs](https://remix.run/docs)
+This take home assignment was used to demonstrate loading, searching, and linking to data. The included _clients.json_ file is an example
+data store. Setting up a real database would be a good next step.
+
+I chose [Remix](https://remix.run) as my starting environment for the following reasons:
+
+1. It's a great way to build server rendered React apps. Support for other frameworks are coming soon (Vue, Svelte, etc.)
+2. Pages render very fast using Remix. You will notice I use prefetch="intent" to preload the data for the client pages. This achieves instant loads for the client routes.
+3. Searching is all handled through the querystring, allowing for bookmarking and sharing of searches easily.
+4. Best of all, you can disable JavaScript and this app still works! Just use the enter key when searching if you have JS disabled.
 
 ## Development
 
