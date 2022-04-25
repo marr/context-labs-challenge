@@ -1,0 +1,13 @@
+.client-details {
+    display: flex;
+    align-items: center;
+    padding: 50px;
+}
+
+.client-header {
+    text-align: center;
+}
+
+.nationality-flag {
+    margin-right: 5px;
+}

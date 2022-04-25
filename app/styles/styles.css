@@ -1,0 +1,63 @@
+body {
+	--color-text: #575972;
+	--color-bg: #fff;
+	--color-link: #eb5b4a ;
+	--color-link-hover: #f1d796;
+	--gradient: linear-gradient(#101232, #101560);
+	color: var(--color-text);
+	background-color: var(--color-bg);
+	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+main {
+    background: var(--gradient);
+	width: 100%;
+	height: 100%;
+}
+
+a {
+	text-decoration: none;
+	color: var(--color-link);
+	outline: none;
+}
+
+a:hover {
+	color: var(--color-link-hover);
+	outline: none;
+}
+
+blockquote::before {
+    content: "\201C"; 
+}
+
+blockquote {
+    margin-left: 20px;
+    padding: 15px;
+}
+
+.clients {
+}
+
+.clients .client {
+    display: flex;
+	align-items: center;
+	gap: 10px;
+    padding-top: 20px;
+	padding-left: 15px;
+}
+
+.client + .client {
+    margin-top: 20px;
+    border-top: 1px solid var(--color-text);
+}
+
+.avatar {
+    width: 50px;
+}
+
+.clients-summary {
+	padding: 2rem;
+	text-align: right;
+}

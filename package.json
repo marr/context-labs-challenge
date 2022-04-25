@@ -7,19 +7,22 @@
   "scripts": {
     "build": "remix build",
     "dev": "remix dev",
-    "start": "remix-serve build"
+    "start": "remix-serve build",
+    "test": "vitest"
   },
   "dependencies": {
     "@remix-run/node": "^1.4.1",
     "@remix-run/react": "^1.4.1",
     "@remix-run/serve": "^1.4.1",
+    "country-emoji": "^1.5.6",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
     "@remix-run/dev": "^1.4.1",
     "@remix-run/eslint-config": "^1.4.1",
-    "eslint": "^8.11.0"
+    "eslint": "^8.11.0",
+    "vitest": "^0.10.0"
   },
   "engines": {
     "node": ">=14"
