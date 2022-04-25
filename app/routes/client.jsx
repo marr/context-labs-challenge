@@ -7,9 +7,9 @@ export const links = () => [
 
 export default function ClientLayout () {
     return (
-        <div className="client">
+        <main className="client-layout">
             <h2 className="client-header">Client detail</h2>
             <Outlet />
-        </div>
+        </main>
     )
 }

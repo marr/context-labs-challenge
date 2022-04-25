@@ -18,6 +18,14 @@ main {
 	height: 100%;
 }
 
+@media  (min-width: 800px) {
+	main > *, nav {
+		width: 600px;
+		margin: 0 auto;	
+	}
+}
+
+
 nav {
 	display: flex;
 	align-items: center;

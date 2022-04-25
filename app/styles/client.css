@@ -1,3 +1,7 @@
+.client-layout {
+    padding: 20px;
+}
+
 .client-details {
     display: flex;
     gap: 30px;
