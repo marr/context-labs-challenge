@@ -3,6 +3,7 @@ body {
 	--color-bg: #fff;
 	--color-link: #eb5b4a ;
 	--color-link-hover: #f1d796;
+	--color-accent: #101558;
 	--gradient: linear-gradient(#101232, #101560);
 	color: var(--color-text);
 	background-color: var(--color-bg);
@@ -17,6 +18,15 @@ main {
 	height: 100%;
 }
 
+nav {
+	display: flex;
+	align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+	min-height: 62px;
+	padding: 10px 20px;
+}
+
 a {
 	text-decoration: none;
 	color: var(--color-link);
@@ -28,16 +38,34 @@ a:hover {
 	outline: none;
 }
 
-blockquote::before {
-    content: "\201C"; 
+q,
+blockquote {
+  quotes: "“" "”" "‘" "’";
+  font-style: italic;
+}
+
+q:before,
+blockquote:before {
+  content: open-quote;
+}
+
+q:after,
+blockquote:after {
+  content: close-quote;
+}
+
+q:before,
+q:after,
+blockquote:before,
+blockquote:after {
+  color: var(--color-accent);
+  font-size: 1.2em;
 }
 
 blockquote {
-    margin-left: 20px;
-    padding: 15px;
-}
-
-.clients {
+  margin-left: 0;
+  padding-left: 1em;
+  border-left: 5px solid var(--color-accent);
 }
 
 .clients .client {
@@ -57,7 +85,16 @@ blockquote {
     width: 50px;
 }
 
+.client-search {
+	padding: 10px;
+}
+
 .clients-summary {
 	padding: 2rem;
 	text-align: right;
+}
+
+.empty-clients {
+	display: grid;
+	place-items: center;
 }

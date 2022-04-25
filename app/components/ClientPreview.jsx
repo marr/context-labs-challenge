@@ -5,7 +5,12 @@ export default function Client({ avatar, id, name, title }) {
         <div className="client">
             <img alt={name} className="avatar" src={avatar} />
             <div className="client-summary">
-                <Link className="client-name" dangerouslySetInnerHTML={{ __html: name }} to={`/client/${id}`} />
+                <Link
+                    className="client-name"
+                    dangerouslySetInnerHTML={{ __html: name }}
+                    prefetch="intent"
+                    to={`/client/${id}`}
+                />
                 <p className="client-title">{title}</p>
             </div>
         </div>

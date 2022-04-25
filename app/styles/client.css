@@ -1,11 +1,21 @@
 .client-details {
     display: flex;
+    gap: 30px;
     align-items: center;
+    justify-content: center;
     padding: 50px;
 }
 
 .client-header {
     text-align: center;
+}
+
+.client-image {
+    width: 128px;
+}
+
+.client-quote {
+    margin-bottom: 10px;
 }
 
 .nationality-flag {

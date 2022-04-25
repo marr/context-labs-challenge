@@ -1,21 +1,29 @@
 import { useLoaderData } from '@remix-run/react';
 import { getClients } from '~/api/client.server';
-import Client from '~/components/Client';
+import ClientPreview from '~/components/ClientPreview';
+import EmptyClients from '~/components/EmptyClients';
 
-export const loader = async () => {
-    return await getClients();
+export const loader = async ({ request }) => {
+    const { searchParams } = new URL(request.url);
+    const query = searchParams.get('q');
+    return await getClients(query);
 }
 
 export default function Index() {
     const data = useLoaderData();
+
+    if (data.length === 0) {
+        return <EmptyClients />
+    }
+
     return (
         <main>
             <div className="clients">
-                {data.map((client, index) => {
-                    return <Client key={`client-${index}`} id={index} {...client} />
+                {data.map(client => {
+                    return <ClientPreview key={client.id} {...client} />
                 })}
             </div>
-            <p className="clients-summary">{data.length} clients</p>
+            <p className="clients-summary">{data.length} client{data.length === 1 ? '' : 's'}</p>
         </main>
     );
 }

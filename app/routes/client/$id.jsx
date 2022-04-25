@@ -17,6 +17,7 @@ export default function ClientRoute() {
         <div className="client-details">
             <img alt={name} className="client-image" src={avatar} />
             <div className="client-summary">
+                { quote ? <blockquote className="client-quote">{quote}</blockquote> : null }
                 <h3 className="client-name" dangerouslySetInnerHTML={{ __html: name }} />
                 <p className="client-title">Title: {title}</p>
                 {nationality ? (
@@ -24,7 +25,7 @@ export default function ClientRoute() {
                         Nationality: <span className="nationality-flag">{flag(nationality)}</span>{nationality}
                     </p>
                 ) : null}
-                { quote ? <blockquote>{quote}</blockquote> : null }
+                
             </div>
         </div>
     );
