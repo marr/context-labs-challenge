@@ -104,7 +104,7 @@ input[type="search"] {
 }
 
 .client-list {
-    padding: 30px 4px;
+    padding: 30px 0;
 }
 
 .client-search {
