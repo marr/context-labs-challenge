@@ -30,7 +30,6 @@ describe("Index Loader", () => {
 describe("Client loader", () => {
     it("should find a specific client", async () => {
         const response = await clientLoader({
-            request: new Request(baseUrl),
             params: {
                 id: "ed-joycetm",
             },
