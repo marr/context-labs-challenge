@@ -3,7 +3,7 @@ import { Link } from "@remix-run/react";
 export default function Client({ avatar, id, name, title }) {
     return (
         <div className="client">
-            <img alt={name} className="avatar" src={avatar} />
+            <img alt={name} className="avatar" height={50} src={avatar} width={50} />
             <div className="client-summary">
                 <Link
                     className="client-name"

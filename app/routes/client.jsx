@@ -1,5 +1,4 @@
-import { Response } from "@remix-run/node";
-import { Outlet } from "@remix-run/react";
+import { Link, Outlet } from "@remix-run/react";
 import clientStyles from "~/styles/client.css";
 
 export const links = () => [
@@ -18,6 +17,7 @@ export default function ClientLayout () {
         <main className="client-layout">
             <h2 className="client-header">Client detail</h2>
             <Outlet />
+            <Link className="client-list" to="/">Back to Clients</Link>
         </main>
     )
 }

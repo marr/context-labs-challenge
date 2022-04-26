@@ -6,6 +6,9 @@ for (const client of clients) {
     client.id = slugify(client.name);
 }
 
+// Better scanability
+clients.sort((a, b) => a.name.localeCompare(b.name));
+
 // This could read directly from a database
 export const getClients = async (query) => {
     if (query) {

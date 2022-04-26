@@ -39,7 +39,7 @@ export default function ClientRoute() {
     const { avatar, name, nationality, title, quote } = useLoaderData();
     return (
         <div className="client-details">
-            <img alt={name} className="client-image" src={avatar} />
+            <img alt={name} className="client-image" height={128} src={avatar} width={128} />
             <div className="client-summary">
                 {quote ? <blockquote className="client-quote">{quote}</blockquote> : null}
                 <h3 className="client-name" dangerouslySetInnerHTML={{ __html: name }} />
@@ -49,7 +49,6 @@ export default function ClientRoute() {
                         Nationality: <span className="nationality-flag">{flag(nationality)}</span>{nationality}
                     </p>
                 ) : null}
-
             </div>
         </div>
     );
